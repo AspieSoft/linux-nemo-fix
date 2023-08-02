@@ -1,0 +1,8 @@
+[Unit]
+Description=Nemo Fix
+
+[Service]
+ExecStart=/bin/bash /etc/nemo-fix/init.sh
+
+[Install]
+WantedBy=multi-user.target
