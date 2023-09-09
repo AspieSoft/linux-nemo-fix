@@ -4,8 +4,8 @@ import (
 	"os"
 	"time"
 
-	regex "github.com/AspieSoft/go-regex/v5/re2-opt"
-	"github.com/AspieSoft/goutil/v5"
+	"github.com/AspieSoft/go-regex-re2"
+	"github.com/AspieSoft/goutil/fs"
 )
 
 func main(){
@@ -36,7 +36,7 @@ func main(){
 		}
 	}()
 
-	watcher := goutil.FS.FileWatcher()
+	watcher := fs.Watcher()
 	watcher.OnFileChange = func(path, op string) {
 		if path == "/usr/share/applications/nemo.desktop" {
 			fixFile = true
